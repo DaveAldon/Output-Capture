@@ -28,6 +28,18 @@ ClassMethod Get(var, verb As %String = "zwrite") As %Library.DynamicArray
 	return output
 }
 
+/// Function that does some work for you and returns a string of the Get output
+ClassMethod GetString(var, verb As %String = "zwrite") As %String
+{
+	set returnedArray = ..Get(var,verb)
+	set out = ""
+	set iter = returnedArray.%GetIterator()
+	while iter.%GetNext(.key, .value) {
+		set out=out_value
+	}
+	return out
+}
+
 /// Example method to demonstrate the function's use
 ClassMethod Example() As %String
 {
