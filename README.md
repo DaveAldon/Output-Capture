@@ -23,9 +23,27 @@ USER>write ##class(OutputCapture.capture).Get(YOUR_VARIABLE,"zzdump")
 USER>41@%Library.DynamicArray
 ```
 
+### If you don't want an array returned...
+
+Just call the following for a string output:
+
+```
+USER>set x = {"asdasd":"asdasdasdasdasd"}
+USER>write ##class(CaptureOutput.capture).GetString(x,"zwrite")
+USER>var=<OBJECT REFERENCE>[41@%Library.DynamicObject]
++----------------- general information ---------------
+|      oref value: 41
+|      class name: %Library.DynamicObject
+| reference count: 4
++----------------- attribute values ------------------
+|           (none)
++-----------------------------------------------------
+{65275,59764{9{
+```
+
 ## Example
 
-If you'd like to this is in action immediately, just call the second provided function for an example:
+If you'd like to this is in action immediately, just call the "Example" function:
 
 ```
 USER>write ##class(OutputCapture.capture).Example()
