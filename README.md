@@ -18,8 +18,8 @@ This function has **two** parameters: the variable, and the verb. The variable c
 The verb parameter is optional, and defaults to zwrite, but add any of these as a string to the second parameter of the function call to receive its output, like the following:
 
 ```
-USER>set YOUR_VARIABLE = {"some":"thing"}
-USER>write ##class(OutputCapture.capture).Get(YOUR_VARIABLE,"zzdump")
+USER>set YOURVARIABLE = {"some":"thing"}
+USER>write ##class(OutputCapture.capture).Get(YOURVARIABLE,"zzdump")
 USER>41@%Library.DynamicArray
 ```
 
